@@ -47,6 +47,52 @@ const List<int> READ_DEVICE_ID = [
   0x00
 ];
 
+const List<int> COUNT_DATA = [
+  0x80,
+  0x0F,
+  0xF0,
+  0x01,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00
+];
+
+const List<int> READ_ONE_DATA = [
+  0x80,
+  0x0F,
+  0xF0,
+  0x02,
+  0x00,
+  0x01,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00,
+  0x00
+];
+
 class ReadScreen extends StatefulWidget {
   @override
   _ReadScreenState createState() => _ReadScreenState();
@@ -148,6 +194,26 @@ class _ReadScreenState extends State<ReadScreen> {
                 ),
                 onPressed: () async {
                   writeCaracteristic.write(READ_DEVICE_ID);
+                },
+              ),
+              RaisedButton(
+                color: Colors.blue,
+                child: Text(
+                  'Read Number of Records',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onPressed: () async {
+                  writeCaracteristic.write(COUNT_DATA);
+                },
+              ),
+              RaisedButton(
+                color: Colors.blue,
+                child: Text(
+                  'Read One Data',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onPressed: () async {
+                  writeCaracteristic.write(READ_ONE_DATA);
                 },
               )
             ],
