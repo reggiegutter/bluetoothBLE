@@ -48,41 +48,6 @@ const List<int> READ_DEVICE_ID = [
 ];
 
 class ReadScreen extends StatefulWidget {
-  // BluetoothService notifyService = _services.firstWhere(
-  //                       (element) =>
-  //                           element.uuid.toString() ==
-  //                           '0000ffe0-0000-1000-8000-00805f9b34fb');
-
-  //                   BluetoothService writeService = _services.firstWhere(
-  //                       (element) =>
-  //                           element.uuid.toString() ==
-  //                           '0000ffe5-0000-1000-8000-00805f9b34fb');
-
-  //                   BluetoothCharacteristic notifyCaracteristic =
-  //                       notifyService.characteristics.firstWhere((element) =>
-  //                           element.uuid.toString() ==
-  //                           '0000ffe4-0000-1000-8000-00805f9b34fb');
-
-  //                   BluetoothCharacteristic writeCaracteristic =
-  //                       writeService.characteristics.firstWhere((element) =>
-  //                           element.uuid.toString() ==
-  //                           '0000ffe9-0000-1000-8000-00805f9b34fb');
-
-  //                   await notifyCaracteristic.setNotifyValue(true);
-
-  //                   notifyCaracteristic.value.listen((value) {
-  //                     print('====================================');
-  //                     print(value);
-  //                     print('====================================');
-  //                     widget.readValues[notifyCaracteristic.uuid] = value;
-  //                   });
-
-  //                   while (true) {
-  //                     writeCaracteristic.write(READ_DATE);
-
-  //                     await Future.delayed(Duration(seconds: 1));
-  //                   }
-
   @override
   _ReadScreenState createState() => _ReadScreenState();
 }
